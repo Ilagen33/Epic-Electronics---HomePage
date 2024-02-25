@@ -1,0 +1,167 @@
+<!-- Il tuo compito è creare un sito e-commerce per Smartphones. 
+L'homepage che stai per creare sarà la vetrina dei prodotti disponibili, con qualche informazione per ciascun prodotto. 
+Non sono richieste funzionalità di carrello/cassa.
+- Completa gli esercizi dall'1 al 6 SOLAMENTE con HTML;
+- Completa gli altri esercizi con JS.
+-->
+
+<!--
+ESERCIZI IN HTML:
+
+ESERCIZIO 1: Inserisci un tag h1 con il nome del tuo negozio;
+ESERCIZIO 2: Aggiungi una tabella con i 5 prodotti più in vista del tuo negozio;
+ESERCIZIO 3: Aggiungi per ogni prodotto un'immagine, un titolo, una descrizione e un prezzo;
+ESERCIZIO 4: Per ogni elemento della tabella aggiungi un link di Amazon al prodotto esistente;
+ESERCIZIO 5: Aggiungi un footer con il nome e l'indirizzo del tuo negozio;
+ESERCIZIO 6: Aggiungi un campo testuale in cui l'utente può lasciare un commento su un prodotto
+(al momento non serve inserire nessuna "vera" funzionalità di POST/salvataggio!).
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Phones - HomePage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>  
+    <!--Titolo della Pagina-->
+    <h1 id="titolo">Titolo</h1>
+
+    <!--Bottone che cambia h1-->
+    <button onclick="cambiaTestoH1()">Cambia titolo</button>
+
+    <!--Tabella in cui sono elencati i 5 Smartphones più in voga/migliori-->
+    <div class="tabella">
+
+        <!--Titolo della tabella-->
+        <section class="Titolo-tabella">
+            <h2 class="title">5 più visti</h2>
+
+            <!--Aggiunto bottone che Nasconde/Mostra tutte le foto dei prodotti della tabella-->
+            <button onclick="appariScompari()">Togli le immagini</button>
+        </section>
+
+        <!--Lista degli elementi-->
+        <section class="elementi">
+            
+            <!--Aggiunto Bottone che modifica il colore dei prezzi ogni volta che viene cliccato-->
+            <button onclick="cambiaColorePrezzi()">Cambia colore ai prezzi</button>
+
+            <!--Primo Elemento della lista-->
+            <article class="primo"> 
+
+                <!--Immagine e titolo con link del prodotto-->
+                <div class="head">           
+                    <img src="https://media-assets.wired.it/photos/65b7be8a39d8c62ce7e4de05/master/w_1920%2Cc_limit/Smartphone%2520Samsung%2520Galaxy%2520S24%2520Ultra.jpg" alt="telefono">
+                    <h5 class="name"><a href="https://www.amazon.it/dp/B0CNKFF9XX/?tag=wireditalia-21">1° Samsung Galaxy S24 Ultra</a></h5>
+                </div>
+
+                <!--Descrizione e prezzo del prodotto-->
+                <div class="body">
+                    <p class="descrizione">Possiamo definirlo come il primo smartphone a puntare quasi tutto sulle funzioni di intelligenza artificiale di nuova generazione: dalla trascrizione che trasforma in testo le registrazioni vocali al riassunto delle attività del giorno pescate dal calendario, passando per la traduzione delle telefonate in presa diretta e per le ormai sempre più diffuse funzionalità di editing fotografico avanzato</p>
+                    <span class="prezzo">1.499,00 euro</span>
+                </div>
+            </article>
+
+            <!--Secondo prodotto della lista-->
+            <article class="secondo">
+
+                <!--Immagine e titolo con link del prodotto-->
+                <div class="head">                
+                    <img src="https://media-assets.wired.it/photos/650455cc6b85a70ef6364fa3/master/w_1920%2Cc_limit/Smartphone%2520Apple%2520iPhone%252015%2520Pro.jpg" alt="telefono">
+                    <h5 class="name"><a href="https://cna.st/p/meh9fHuiYWLjmpRbZZG4FJNTsZo9YFK2B8FeuChj5Un7X9Rh5r4WT7Xd6eZmMpREiFWgMhnTwWhfZR25yCmyuzVdtnvKwo1UGDvBYjvFNMKF5Fp2DXfRfajWyDqiXMyATJZPCgBC6yJhfCFNvtbkWN6oNJoWNUKJNrdLKE2k6">2° Apple iPhone 15 Pro</a></h5>
+                </div>                
+                
+                <!--Descrizione e prezzo del prodotto-->
+                <div class="body">
+                    <p class="descrizione">Nel concreto il design si arricchisce di un telaio in titanio e di una porta usb di tipo c sostituisce la vecchia Lightning per la ricarica e per un trasferimento dati più veloce. Il nuovo processore A17 Pro mantiene ogni operazione incredibilmente veloce e continua a dare superpoteri al comparto foto e video.</p>
+                    <span class="prezzo">1.029,00 euro</span>
+                </div>
+            </article>
+
+            <!--Terzo prodotto della lista-->
+            <article class="terzo">
+                
+                <!--Immagine e titolo con link del prodotto-->
+                <div class="head">              
+                    <img src="https://media-assets.wired.it/photos/652e9b4165123e8171491339/master/w_1920%2Cc_limit/Smartphone%2520Google%2520Pixel%25208%2520Pro.jpg" alt="telefono">
+                    <h5 class="name"><a href="https://www.amazon.it/Google-Pixel-Pro-Smartphone-teleobiettivo/dp/B0CGVVVDXW?&linkCode=ll1&tag=wireditalia-21&linkId=6bb2716e9ade7a9467e6aa368bf65da0&language=it_IT&ref_=as_li_ss_tl">3° Smartphone Google Pixel 8 Pro</a></h5>
+                </div>
+            
+                <!--Descrizione e prezzo del prodotto-->
+                <div class="body">
+                    <p class="descrizione">Arrivato sul finire dell'anno, si è conquistato le attenzioni della critica in virtù di un comparto fotografico fenomenale e di funzioni di intelligenza artificiale uniche (su tutti il magic editor per modificare foto in pochi tocchi). Alla base c'è un ampio display da 6,7 pollici tra i migliori sul mercato. </p>
+                    <span class="prezzo">980,00 euro</span>
+                </div>
+            </article>
+
+            <!--Quarto prodotto della lista-->
+            <article class="quarto">                 
+                
+                <!--Immagine e titolo con link del prodotto-->
+                <div class="head">               
+                    <img src="https://media-assets.wired.it/photos/64a80cdc4313b9306490efeb/master/w_1920%2Cc_limit/smartphone-asus-zenfone-10.jpg" alt="telefono">
+                    <h5 class="name"><a href="https://www.amazon.it/ASUS-Zenfone-Dual-sbloccato-solo/dp/B0CB1WS8NZ?&linkCode=ll1&tag=wireditalia-21&linkId=80ba709082ef6631382e58f2c2783934&language=it_IT&ref_=as_li_ss_tl" class="Link">4° Asus Zenfone 10</a></h5>
+                </div> 
+
+                <!--Descrizione e prezzo del prodotto-->
+                <div class="body">
+                    <p class="descrizione">Chi cerca un telefono Android compatto ma potente ha trovato il suo nuovo smartphone: l'ultimo Zenfone raccoglie l'eredità dei predecessori e si differenzia da decine di avversari con un (ottimo) display da appena 5,9 pollici di diagonale.</p>
+                    <span class="prezzo">829,49 euro</span>
+
+                    <!-- Aggiunto Bottone che aggiunge la classe a tutti i link dei prodotti-->
+                    <button onclick="classeLink()">x</button>
+                </div>
+            </article>
+
+            <!--Quinto prodotto della lista-->
+            <article class="quinto">
+
+                <!--Immagine e titolo con link del prodotto-->
+                <div class="head">
+                    <img src="https://media-assets.wired.it/photos/64492451c7976b7e23e46e1f/master/w_1920%2Cc_limit/smartphone%2520Xiaomi%252013%2520Ultra.jpg" alt="telefono">
+                    <h5 class="name"><a href="https://www.mi.com/it/product/xiaomi-13-ultra/?skupanel=1">5° Xiaomi 13 Ultra</a></h5>
+                </div>
+
+                <!--Descrizione e prezzo del prodotto-->
+                <div class="body">
+                    <p class="descrizione">Questa è una fotocamera vestita da smartphone, particolare proprio per la sua vocazione fotografica estrema. Le specifiche tecniche sono da eccellenza anche se per molti versi in comune con quelle degli altri telefoni Android di pari fascia – dall'eccezionale (ma ingombrante) schermo oled da 6,73 pollici all'ingresso usb di tipo 3.2, per trasferimenti ultraveloci di file e foto di grandi dimensioni.</p>
+                    <span class="prezzo">1.499,90 euro</span>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <!--Bottone che cambia il colore dello sfondo di tutta la pagina (tranne il footer)-->
+    <button onclick="changeBackgroundColor()">Cambia Sfondo</button>
+    </main>
+
+    <!--Footer-->
+    <footer>
+
+        <div class="info">
+
+            <!--Nome dell'azienda-->
+            <h4 class="name">Epic Electronics</h4>
+
+            <!--Indirizzo dell'azienda-->
+            <p class="indirizzo">Via Pippo Pluto e Paperino, 123, Dubai</p>
+
+            <!--Bottone che cambia l'indirizzo-->
+            <button onclick="cambiaIndirizzo()">Sicuro che è questo l'indirizzo?</button>
+        </div>
+
+        <!--Inserimento consigli da parte dell'utente-->
+        <input type="text" placeholder="Hai qualcosa da consigliarci?">
+    </footer>
+
+    <!--Collegamento al js-->
+    <script src="script.js"></script>
+</body>
+</html>

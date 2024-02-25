@@ -1,0 +1,135 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*inserire font-family in body*/
+
+/*Titolo, aggiungo un margine*/
+h1 {
+    margin: 10px 0 0 10px;
+}
+
+/*stile bottoni (delle funzioni js)*/
+button {
+
+    /*style*/
+    background-color: white;
+    border: white;
+
+    /*size*/
+    margin-left: 15px;
+    font-size: 10px;
+    padding: 0 10px;
+}
+
+/*Cambio puntatore sopra i bottoni*/
+button:hover {
+    cursor: pointer;
+}
+
+/*titolo tabella*/
+h2 {
+    margin: 10px;
+}
+
+/*tabella*/
+.tabella {
+    width: 100 vw;
+    margin: 0 10px;
+}
+
+/*elementi della tabella*/
+.primo, .secondo, .terzo, .quarto, .quinto {
+
+    /*Posizione per distanziare head (con foto e nome del prodotto) e body(con descrizione e prezzo del prodotto)*/
+    display:flex;
+    justify-content: space-between;
+
+    /*size e bordo*/
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+/*descrizione dei prodotti*/
+.elementi p {
+    width:500px;
+    padding: 0 10px;
+}
+
+/*Foto e nome (con link) dei prodotti*/
+.head {
+    display: flex;
+    align-items: center;
+}
+
+/*Descrizione e prezzo dei prodotti*/
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Size delle immagini dei prodotti*/
+.elementi img {
+    width: 170px;
+    height: 120px;
+}
+
+/*Titolo di ogni prodotto*/
+.elementi h5 {
+    width: 80px;
+    padding: 10px;
+
+}
+
+/*Link ad Amazon di ogni prodotto*/
+a {
+    text-decoration: none;
+}
+
+.primo a {
+    color: gold;
+}
+
+.secondo a {
+    color: silver;
+}
+
+.terzo a {
+    color: rgb(144, 87, 12)
+}
+
+.quarto a, .quinto a {
+    color:black;
+}
+
+.prezzo {
+    font-size: 12px;
+}
+
+/*footer*/
+footer {
+    /*Position*/
+    display: flex;
+    justify-content: space-around;
+    /*color*/
+    background: linear-gradient(30deg, #E91E63, #9C27B0);
+    /*border*/
+    border-top: 2px solid black;
+    /*size*/
+    padding: 10px;
+}
+
+/*input field, opinioni utenti*/
+input {
+    /*size*/
+    width: 175px;
+    padding: 5px;
+    /*border*/
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
